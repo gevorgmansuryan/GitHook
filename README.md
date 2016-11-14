@@ -39,9 +39,9 @@ composer require gevman/git-hook
 automatically `git pull` on your server after every push
 
 ```php
-require __DIR__.'/../vendor/autoload.php';
+require __DIR__.'/vendor/autoload.php';
 
-$gitHubRepo = new Gevman\GitHook\GitHub\Repository();
+$gitHubRepo = new \Gevman\GitHook\GitHub\Repository();
 
 $gitHubRepo->onPush(function() {
     exec('cd /path/to/your/project && git pull');
@@ -53,10 +53,10 @@ notify your team in Slack about `Pull request`
 
 (I suggest use [gevman/slack-bot](https://packagist.org/packages/gevman/slack-bot) ☺)
 ```php
-require __DIR__.'/../vendor/autoload.php';
+require __DIR__.'/vendor/autoload.php';
 
-$gitHubRepo = new Gevman\GitHook\GitHub\Repository();
-$slackBot = new Gevman\SlackBot\IncomingBot('YOUR_SLACK_HOOK_URL');
+$gitHubRepo = new \Gevman\GitHook\GitHub\Repository();
+$slackBot = new \Gevman\SlackBot\IncomingBot('YOUR_SLACK_HOOK_URL');
 
 $gitHubRepo->onPullRequest(function($payload) use ($slackBot) {
     $message = sprintf(
@@ -99,7 +99,7 @@ $gitHubRepo->onPullRequest(function($payload) use ($slackBot) {
 automatically `git pull` on your server after every push
 
 ```php
-require __DIR__.'/../vendor/autoload.php';
+require __DIR__.'/vendor/autoload.php';
 
 $bitBucketRepo = new \Gevman\GitHook\BitBucket\Repository();
 
@@ -113,10 +113,10 @@ notify your team in Slack about `Pull request`
 
 (I suggest use [gevman/slack-bot](https://packagist.org/packages/gevman/slack-bot) ☺)
 ```php
-require __DIR__.'/../vendor/autoload.php';
+require __DIR__.'/vendor/autoload.php';
 
 $bitBucketRepo = new \Gevman\GitHook\BitBucket\Repository();
-$slackBot = new Gevman\SlackBot\IncomingBot('YOUR_SLACK_HOOK_URL');
+$slackBot = new \Gevman\SlackBot\IncomingBot('YOUR_SLACK_HOOK_URL');
 
 $notifier = function($action) use ($slackBot) {
     return function($payload) use ($action, $slackBot) {
