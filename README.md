@@ -51,7 +51,7 @@ $gitHubRepo->onPush(function() {
 ######Example #2
 notify your team in Slack about `Pull request`
 
-(I suggest use [gevman/slack-bot](https://packagist.org/packages/gevman/slack-bot))
+(I suggest use [gevman/slack-bot](https://packagist.org/packages/gevman/slack-bot) ☺)
 ```php
 require __DIR__.'/../vendor/autoload.php';
 
@@ -111,7 +111,7 @@ $bitBucketRepo->onPush(function() {
 ######Example #2
 notify your team in Slack about `Pull request`
 
-(I suggest use [gevman/slack-bot](https://packagist.org/packages/gevman/slack-bot))
+(I suggest use [gevman/slack-bot](https://packagist.org/packages/gevman/slack-bot) ☺)
 ```php
 require __DIR__.'/../vendor/autoload.php';
 
