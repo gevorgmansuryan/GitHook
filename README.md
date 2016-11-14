@@ -2,6 +2,12 @@
 
 works with GitHub and BitBucket webHooks
 
+##Installation
+
+```bash
+composer require gevman/git-hook
+```
+
 ###GitHub Events (https://developer.github.com/webhooks/)
 
 - onCommitComment - Commit or diff commented on.
@@ -32,13 +38,12 @@ works with GitHub and BitBucket webHooks
 ######automatically pull your server after every push
 
 ```php
-<?php
+require __DIR__.'/../vendor/autoload.php';
 
 $gitHubRepo = new Gevman\GitHook\GitHub\Repository();
 
 $gitHubRepo->onPush(function($payload) {
 	exec('cd /path/to/your/project && git pull');
 });
-
 ```
 
