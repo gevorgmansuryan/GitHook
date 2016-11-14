@@ -21,5 +21,6 @@ abstract class Repository
 	public function __call($name, $arguments)
 	{
 		$this->eventHandler->add($name, $arguments[0]);
+		return $this;
 	}
 }
