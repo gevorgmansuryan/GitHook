@@ -1,0 +1,19 @@
+{
+    "name": "gevman/git-hook",
+    "description": "Git Hook - A php library for handle GitHub and BitBucket webHook events",
+    "type": "project",
+    "require": {
+        "php": ">=5.4"
+    },
+    "authors": [
+        {
+            "name": "Gevorg Mansuryan",
+            "email": "gevorgmansuryan@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Gevman\\GitHook\\": "src/"
+        }
+    }
+}
