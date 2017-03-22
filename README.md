@@ -2,13 +2,13 @@
 
 works with GitHub and BitBucket webHooks
 
-##Installation (using composer)
+## Installation (using composer)
 
 ```bash
 composer require gevman/git-hook
 ```
 
-###GitHub Events 	(for more info take a look at [Official GitHub Documentation](https://developer.github.com/webhooks/))
+### GitHub Events 	(for more info take a look at [Official GitHub Documentation](https://developer.github.com/webhooks/))
 
 - `onCommitComment` - Commit or diff commented on.
 - `onCreate` - Branch or tag created.
@@ -33,9 +33,9 @@ composer require gevman/git-hook
 - `onTeamAdd` - Team added or modified on a repository.
 - `onWatch` - User stars a repository.
 
-####Examples
+#### Examples
 
-######Example #1
+###### Example #1
 automatically `git pull` on your server after every push
 
 ```php
@@ -48,7 +48,7 @@ $gitHubRepo->onPush(function() {
 });
 ```
 
-######Example #2
+###### Example #2
 notify your team in Slack about `Pull request`
 
 (I suggest use [gevman/slack-bot](https://packagist.org/packages/gevman/slack-bot) ☺)
@@ -72,7 +72,7 @@ $gitHubRepo->onPullRequest(function($payload) use ($slackBot) {
 });
 ```
 
-###BitBucket Events 	(for more info take a look at [Official BitBucket Documentation](https://confluence.atlassian.com/bitbucket/event-payloads-740262817.html))
+### BitBucket Events 	(for more info take a look at [Official BitBucket Documentation](https://confluence.atlassian.com/bitbucket/event-payloads-740262817.html))
 
 - `onPush` - A user pushes 1 or more commits to a repository.
 - `onFork` - A user forks a repository.
@@ -93,9 +93,9 @@ $gitHubRepo->onPullRequest(function($payload) use ($slackBot) {
 - `onPullRequestCommentUpdated` - A user updates a comment on a pull request.
 - `onPullRequestCommentDeleted` - A user deletes a comment on a pull request.
 
-####Examples
+#### Examples
 
-######Example #1
+###### Example #1
 automatically `git pull` on your server after every push
 
 ```php
@@ -108,7 +108,7 @@ $bitBucketRepo->onPush(function() {
 });
 ```
 
-######Example #2
+###### Example #2
 notify your team in Slack about `Pull request`
 
 (I suggest use [gevman/slack-bot](https://packagist.org/packages/gevman/slack-bot) ☺)
